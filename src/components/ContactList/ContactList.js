@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   List,
   Contact,
@@ -22,4 +24,10 @@ const ContactList = ({ contacts, onDeleteContact }) => (
     ))}
   </List>
 );
+
+ContactList.propTypes = {
+  contacts: PropTypes.array,
+  onDeleteContact: PropTypes.func,
+};
+
 export default ContactList;
