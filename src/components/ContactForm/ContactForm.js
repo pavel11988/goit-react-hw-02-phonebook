@@ -20,7 +20,7 @@ class ContactForm extends Component {
     e.preventDefault();
 
     if (this.state.name.trim() === '' || this.state.tel.trim() === '') {
-      alert('Введите корректные данные.');
+      alert('Warning! Please enter correct data! ');
       return;
     }
     this.props.onSubmit(this.state);
