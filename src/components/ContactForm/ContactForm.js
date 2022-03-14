@@ -18,7 +18,11 @@ class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+
+    if (this.state.name.trim() === '' || this.state.tel.trim() === '') {
+      alert('Введите корректные данные.');
+      return;
+    }
     this.props.onSubmit(this.state);
     this.setState({
       name: '',
