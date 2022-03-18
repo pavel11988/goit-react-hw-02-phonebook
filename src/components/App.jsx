@@ -6,6 +6,7 @@ import { Container } from './Container/Containet.styled';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
+import { Contact } from './ContactList/ContactList.styled';
 
 class App extends Component {
   state = {
@@ -77,7 +78,9 @@ class App extends Component {
         <ContactList
           contacts={filteredContacts}
           onDeleteContact={this.deleteContact}
-        />
+        >
+          <Contact />
+        </ContactList>
       </Container>
     );
   }
